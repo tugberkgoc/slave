@@ -1,0 +1,1 @@
+worker: java -jar build/libs/slave-1.0.jar
