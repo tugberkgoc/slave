@@ -1,12 +1,11 @@
-package goct.command.commands;
+package com.goct.command.commands;
 
-import goct.CommandManager;
-import goct.Config;
-import goct.command.CommandContext;
-import goct.command.ICommand;
+import com.goct.CommandManager;
+import com.goct.Config;
+import com.goct.command.CommandContext;
+import com.goct.command.ICommand;
 import net.dv8tion.jda.api.entities.TextChannel;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class HelpCommand implements ICommand {
@@ -56,6 +55,6 @@ public class HelpCommand implements ICommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("commands", "cmds", "commandlist");
+        return List.of("commands", "cmds", "commandlist");
     }
 }

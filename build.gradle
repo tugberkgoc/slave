@@ -4,11 +4,11 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '4.0.4'
 }
 
-group 'org.goct'
+group 'org.com.goct'
 version '1.0'
-mainClassName = 'goct.Bot'
+mainClassName = 'com.goct.Bot'
 compileJava.options.encoding = 'UTF-8'
-sourceCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     jcenter()

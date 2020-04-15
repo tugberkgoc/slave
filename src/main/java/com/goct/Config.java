@@ -1,4 +1,4 @@
-package goct;
+package com.goct;
 
 import io.github.cdimascio.dotenv.Dotenv;
 

@@ -1,7 +1,7 @@
-package goct.command.commands;
+package com.goct.command.commands;
 
-import goct.command.CommandContext;
-import goct.command.ICommand;
+import com.goct.command.CommandContext;
+import com.goct.command.ICommand;
 import net.dv8tion.jda.api.JDA;
 
 public class PingCommand implements ICommand {

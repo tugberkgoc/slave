@@ -1,18 +1,17 @@
-package goct;
+package com.goct;
 
-import goct.command.CommandContext;
-import goct.command.ICommand;
-import goct.command.commands.*;
-import goct.command.commands.music.JoinCommand;
-import goct.command.commands.music.LeaveCommand;
-import goct.command.commands.music.PlayCommand;
-import goct.command.commands.music.StopCommand;
+import com.goct.command.CommandContext;
+import com.goct.command.ICommand;
+import com.goct.command.commands.*;
+import com.goct.command.commands.music.JoinCommand;
+import com.goct.command.commands.music.LeaveCommand;
+import com.goct.command.commands.music.PlayCommand;
+import com.goct.command.commands.music.StopCommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -68,7 +67,7 @@ public class CommandManager {
 
         if (cmd != null) {
             event.getChannel().sendTyping().queue();
-            List<String> args = Arrays.asList(split).subList(1, split.length);
+            List<String> args = List.of(split).subList(1, split.length);
 
             CommandContext ctx = new CommandContext(event, args);
 

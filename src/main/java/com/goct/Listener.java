@@ -1,4 +1,4 @@
-package goct;
+package com.goct;
 
 import me.duncte123.botcommons.BotCommons;
 import net.dv8tion.jda.api.entities.User;

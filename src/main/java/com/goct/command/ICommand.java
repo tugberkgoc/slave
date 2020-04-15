@@ -1,6 +1,5 @@
-package goct.command;
+package com.goct.command;
 
-import java.util.Collections;
 import java.util.List;
 
 public interface ICommand {
@@ -11,6 +10,6 @@ public interface ICommand {
     String getHelp();
 
     default List<String> getAliases() {
-        return Collections.emptyList();
+        return List.of();
     }
 }

@@ -1,8 +1,8 @@
-package goct.command.commands;
+package com.goct.command.commands;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import goct.command.CommandContext;
-import goct.command.ICommand;
+import com.goct.command.CommandContext;
+import com.goct.command.ICommand;
 import me.duncte123.botcommons.web.ContentType;
 import me.duncte123.botcommons.web.WebParserUtils;
 import me.duncte123.botcommons.web.WebUtils;

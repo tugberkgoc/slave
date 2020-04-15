@@ -1,11 +1,10 @@
-package goct.command.commands;
+package com.goct.command.commands;
 
-import goct.command.CommandContext;
-import goct.command.ICommand;
+import com.goct.command.CommandContext;
+import com.goct.command.ICommand;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class SquadCommand implements ICommand {
@@ -30,6 +29,6 @@ public class SquadCommand implements ICommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("pubg", "squad");
+        return List.of("pubg", "squad");
     }
 }

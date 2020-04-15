@@ -1,7 +1,7 @@
-package goct.command.commands.music;
+package com.goct.command.commands.music;
 
-import goct.command.CommandContext;
-import goct.command.ICommand;
+import com.goct.command.CommandContext;
+import com.goct.command.ICommand;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.VoiceChannel;
 import net.dv8tion.jda.api.managers.AudioManager;

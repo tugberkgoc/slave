@@ -1,4 +1,4 @@
-package goct.command;
+package com.goct.command;
 
 import me.duncte123.botcommons.commands.ICommandContext;
 import net.dv8tion.jda.api.entities.Guild;
