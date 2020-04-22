@@ -2,7 +2,7 @@ package com.goct.command.commands.music;
 
 import com.goct.command.CommandContext;
 import com.goct.command.ICommand;
-import com.goct.music.IYoutube;
+import com.goct.music.IYoutubeApi;
 import com.goct.music.PlayerManager;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
@@ -19,10 +19,10 @@ import java.util.List;
 
 public class PlayCommand implements ICommand {
 
-    private final IYoutube youtube;
+    private final IYoutubeApi youtube;
 
     public PlayCommand() {
-        youtube = new IYoutube();
+        youtube = new IYoutubeApi();
     }
 
     @Override
