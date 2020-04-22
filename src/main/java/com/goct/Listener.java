@@ -1,5 +1,6 @@
 package com.goct;
 
+import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import me.duncte123.botcommons.BotCommons;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.ReadyEvent;
@@ -13,7 +14,11 @@ import javax.annotation.Nonnull;
 public class Listener extends ListenerAdapter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Listener.class);
-    private final CommandManager manager = new CommandManager();
+    private static CommandManager manager = null;
+
+    public Listener(EventWaiter eventWaiter) {
+        manager = new CommandManager(eventWaiter);
+    }
 
     @Override
     public void onReady(@Nonnull ReadyEvent event) {

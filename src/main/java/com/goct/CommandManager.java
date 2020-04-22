@@ -3,10 +3,8 @@ package com.goct;
 import com.goct.command.CommandContext;
 import com.goct.command.ICommand;
 import com.goct.command.commands.*;
-import com.goct.command.commands.music.JoinCommand;
-import com.goct.command.commands.music.LeaveCommand;
-import com.goct.command.commands.music.PlayCommand;
-import com.goct.command.commands.music.StopCommand;
+import com.goct.command.commands.music.*;
+import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,7 +17,7 @@ public class CommandManager {
 
     private final List<ICommand> commands = new ArrayList<>();
 
-    public CommandManager() {
+    public CommandManager(EventWaiter eventWaiter) {
         addCommand(new PingCommand());
         addCommand(new HelpCommand(this));
         addCommand(new PasteCommand());
@@ -28,7 +26,8 @@ public class CommandManager {
         addCommand(new LeaveCommand());
         addCommand(new PlayCommand());
         addCommand(new StopCommand());
-        addCommand(new SquadCommand());
+        addCommand(new SearchCommand(eventWaiter));
+        addCommand(new UserInfo());
     }
 
     private void addCommand(ICommand cmd) {

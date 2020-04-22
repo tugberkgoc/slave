@@ -7,7 +7,7 @@ import com.goct.music.PlayerManager;
 
 public class StopCommand implements ICommand {
 
-    private LeaveCommand leaveCommand;
+    private final LeaveCommand leaveCommand;
 
     public StopCommand() {
         leaveCommand = new LeaveCommand();
